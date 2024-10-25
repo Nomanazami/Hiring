@@ -1,0 +1,32 @@
+.card{
+  background-color: gray;
+  height: 300px;
+  width: 300px;
+ 
+  text-align: center;
+
+  margin: 15px; 
+}
+
+.hiring{
+
+   padding-top: 20px;
+   display: flex;
+   
+   flex-wrap: wrap;
+   
+ }
+
+/*.hiringTwo{
+
+   padding-top: 20px;
+   display: flex;
+   
+   flex-wrap: wrap;
+   
+} */
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

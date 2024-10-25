@@ -1,25 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./components/Navbar"
+import Card from './components/Card';
+import Categories from './components/Categories';
+import Jobs from './components/Jobs';
+import ButtonAppBar from './components/Navbar';
+
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
+import { Category } from '@mui/icons-material';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <div className='hirmain'>
+
+      <BrowserRouter>
+      <Routes>
+        <Route path="/category" element={<Categories />} />
+        {/* <Route path="/jobs" element={<ButtonAppBar><Jobs /></ButtonAppBar>} /> */}
+      </Routes>
+    </BrowserRouter>
+
+
+      <Card/>
+      </div>
+
+
+
+    </>
   );
 }
 
 export default App;
+
+// function App() {
+//   return (
+//  <div>
+//   <NavBar/>
+//   <JobDetail />
+
+//   {/* <div>
+//     useEffect(function(){
+//       console.log("useeffect wala")
+      
+//     },[])
+//     fetch("https://dummyjson.com/users")
+//     .
+//   </div> */}
+  
+//  </div>
+//   );
+// }
